@@ -6,9 +6,9 @@ public class VkPost {
     private String title;
     private String text;
     private Date creationTime;
-    private int likesCount;
-    private int viewsCount;
-    private int repostCount;
+    private LikesInfo likesInfo;
+    private ViewsInfo viewsInfo;
+    private RepostInfo repostInfo;
     private int id;
     private int ownerId;
     private int authorId;
@@ -28,6 +28,7 @@ public class VkPost {
     private boolean markedAsAds;
     private boolean isFavorite;
     private int postponedId;
+    private GeoInfo geoInfo;
 
     public String getTitle() {
         return title;
@@ -51,30 +52,6 @@ public class VkPost {
 
     public void setCreationTime(Date creationTime) {
         this.creationTime = creationTime;
-    }
-
-    public int getLikesCount() {
-        return likesCount;
-    }
-
-    public void setLikesCount(int likesCount) {
-        this.likesCount = likesCount;
-    }
-
-    public int getViewsCount() {
-        return viewsCount;
-    }
-
-    public void setViewsCount(int viewsCount) {
-        this.viewsCount = viewsCount;
-    }
-
-    public int getRepostCount() {
-        return repostCount;
-    }
-
-    public void setRepostCount(int repostCount) {
-        this.repostCount = repostCount;
     }
 
     public int getId() {
@@ -227,6 +204,38 @@ public class VkPost {
 
     public void setPostponedId(int postponedId) {
         this.postponedId = postponedId;
+    }
+
+    public LikesInfo getLikesInfo() {
+        return likesInfo;
+    }
+
+    public void setLikesInfo(LikesInfo likesInfo) {
+        this.likesInfo = likesInfo;
+    }
+
+    public RepostInfo getRepostInfo() {
+        return repostInfo;
+    }
+
+    public void setRepostInfo(RepostInfo repostInfo) {
+        this.repostInfo = repostInfo;
+    }
+
+    public ViewsInfo getViewsInfo() {
+        return viewsInfo;
+    }
+
+    public void setViewsInfo(ViewsInfo viewsInfo) {
+        this.viewsInfo = viewsInfo;
+    }
+
+    public GeoInfo getGeoInfo() {
+        return geoInfo;
+    }
+
+    public void setGeoInfo(GeoInfo geoInfo) {
+        this.geoInfo = geoInfo;
     }
 
     enum PostType {

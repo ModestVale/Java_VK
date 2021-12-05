@@ -12,7 +12,7 @@ public class PostManager {
             int offset) {
         return null;
     }
-    
+
     public void delete(int ownerId, int postId) {
     }
 }
